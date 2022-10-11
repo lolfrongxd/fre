@@ -1,4 +1,3 @@
--- local variables for API functions. any changes to the line below will be lost on re-generation
 local getgenv, ipairs, typeof = getgenv, ipairs, typeof
 
 if getgenv().Aiming then return getgenv().Aiming end
