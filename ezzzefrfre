@@ -357,7 +357,6 @@ function Aiming.GetClosestTargetPartToCursor(Character)
             for _, v in ipairs(Character:GetChildren()) do
                 -- // See if it a part
                 if not (v:IsA("BasePart")) then
-                    continue
                 end
 
                 -- // Check it
@@ -412,7 +411,7 @@ function Aiming.GetClosestPlayerToCursor()
                 -- // Check if is in FOV
                 if (circle.Radius > Magnitude and Magnitude < ShortestDistance) then
                     -- // Check if Visible
-                    if (Aiming.VisibleCheck and not Aiming.IsPartVisible(TargetPartTemp, Character)) then continue end
+                    if (Aiming.VisibleCheck and not Aiming.IsPartVisible(TargetPartTemp, Character)) then end
 
                     -- // Set vars
                     ClosestPlayer = Player
